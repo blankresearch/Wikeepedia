@@ -2,7 +2,7 @@
 # Wikeepedia
 A tool that turns Wikipedia pages into a graph, showing how articles link to each other. Useful to learn and browse related concepts visually.
 
-<img src="media/Demo.gif" style="border-radius: 20px;" />
+<img src="https://media.githubusercontent.com/media/blankresearch/Wikeepedia/refs/heads/main/media/Demo.gif" style="border-radius: 20px;" />
 
 ## Quickstart
 Wikeepedia is built on Flask. It's easy to launch, just follow the steps below.
