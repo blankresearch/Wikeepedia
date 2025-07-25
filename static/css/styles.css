@@ -1,0 +1,25 @@
+@font-face {
+    font-family: 'LinLibertine';
+    src: url('/static/fonts/LinLibertine_R.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Geneva';
+    src: url('/static/fonts/Geneva.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+.font-geneva {
+    font-family: 'Geneva', serif;
+}
+
+.font-wiki {
+    font-family: 'LinLibertine', serif;
+}
+
+.wiki-color-1 {
+    color: #332e43;
+}

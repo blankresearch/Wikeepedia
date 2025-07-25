@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Wikeepedia - Words presented differently</title>
+  <script src="https://d3js.org/d3.v7.min.js"></script>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="/static/css/styles.css" rel="stylesheet">
+
+  <style>
+    body {
+      margin: 0;
+      font-family: sans-serif;
+      background-color: white;
+      overflow: hidden;
+    }
+    svg {
+      width: 100vw;
+      height: 100vh;
+      overflow: visible;
+    }
+  </style>
+</head>
+<body class="m-0 font-sans bg-white overflow-hidden flex flex-col justify-between h-screen">
+
+  <!-- Top-left logo -->
+  <div class="flex items-center gap-4 p-4">
+    <img src="/static/icons/wikipedia.png" alt="Wikipedia Logo" class="h-16 w-16" />
+    <a href="/" class="font-bold text-4xl wiki-color-1 font-wiki">Wikeepedia</a>
+  </div>
+
+  <!-- Bottom search bar -->
+  <div class="flex justify-center p-4">
+    <div class="absolute bottom-0 left-1/2 transform -translate-x-1/2 mb-4">
+      <div class="w-[32rem] p-3 bg-[#332e43] text-white mb-4 flex items-center gap-2 border text-opacity-90 border-gray-300 rounded-full">
+        <img src="/static/icons/search.png" alt="Search" class="opacity-70 w-5 h-5 ml-3 mr-4" />
+        <input
+          type="text"
+          id="wikiInput"
+          class="w-full focus:outline-none bg-transparent"
+          placeholder="Enter Wikipedia URL..."
+        />
+        <input
+          type="number"
+          id="depthInput"
+          min="1"
+          max="3"
+          value="1"
+          class="hidden"
+        />
+      </div>
+    </div>
+    
+  </div>
+
+  
+  <div id="tooltip" class="fixed max-w-sm p-6 tracking-wide font-geneva text-sm bg-white border border-gray-300 rounded-2xl shadow-lg pointer-events-none hidden">
+    
+  </div>
+  <div id="disambiguation-box" class="hidden absolute top-28 left-1/2 transform -translate-x-1/2 bg-white border border-gray-300 rounded shadow-lg z-50 p-2 max-w-md w-full">
+    <p class="font-bold mb-2">Did you mean:</p>
+    <ul id="disambiguation-options" class="space-y-1"></ul>
+  </div>
+  
+  <script src="/static/js/graph.js"></script>
+</body>
+
+</html>

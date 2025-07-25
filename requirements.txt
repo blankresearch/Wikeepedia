@@ -1,0 +1,4 @@
+flask
+wikipedia-api
+networkx
+wikipedia
